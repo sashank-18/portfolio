@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+
 nav {
   position: fixed;
   top: 0;
@@ -44,7 +43,7 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
-/* Hamburger Menu */
+
 .menu-btn {
   display: none;
   cursor: pointer;
@@ -68,7 +67,7 @@ nav ul li a:hover {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Mobile Menu */
+
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
@@ -89,8 +88,13 @@ nav ul li a:hover {
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  nav ul.active {
+    right: 20px;  
+  }
+}
 
-/* Menu item grow effect */
+
 @keyframes menuItemGrow {
   0% { transform: scale(0.8); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -105,10 +109,10 @@ nav ul li a:hover {
   color: #ff6f61;
   transform: scale(1.1);
 }
-/* Hero Section */
+
 header {
   height: 100vh;
-  background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* simpler, less colourful */
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d); 
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   color: #fff;
@@ -120,14 +124,12 @@ header {
   padding: 0 20px;
 }
 
-/* Animate gradient */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Hero Text */
 .hero-text h1 {
   font-size: 4rem;
   font-weight: 700;
@@ -166,8 +168,6 @@ header {
   background: #333;
 }
 
-
-/* Particles */
 .particles {
   position: absolute;
   top: 0;
@@ -175,7 +175,7 @@ header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0; /* behind text */
+  z-index: 0; 
 }
 
 .particles span {
@@ -188,7 +188,6 @@ header {
   animation: float 15s linear infinite;
 }
 
-/* Position particles randomly */
 .particles span:nth-child(1) { top: 10%; left: 20%; animation-duration: 12s; }
 .particles span:nth-child(2) { top: 30%; left: 80%; animation-duration: 18s; }
 .particles span:nth-child(3) { top: 50%; left: 40%; animation-duration: 14s; }
@@ -198,7 +197,6 @@ header {
 .particles span:nth-child(7) { top: 60%; left: 30%; animation-duration: 19s; }
 .particles span:nth-child(8) { top: 80%; left: 70%; animation-duration: 21s; }
 
-/* Floating animation */
 @keyframes float {
   0% {
     transform: translateY(0) translateX(0) scale(1);
@@ -214,21 +212,18 @@ header {
   }
 }
 
-/* Ensure hero-text is above particles */
 .hero-text {
   position: relative;
   z-index: 1;
 }
 
 
-/* Fade in animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 
-/* Sections */
 section {
   padding: 80px 50px;
   text-align: center;
@@ -239,7 +234,6 @@ section h2 {
   color: #111;
 }
 
-/* About */
 .about-content {
   display: flex;
   align-items: center;
@@ -261,7 +255,6 @@ section h2 {
   text-align: left;
 }
 
-/* Skills */
 .skills {
   display: flex;
   justify-content: center;
@@ -282,7 +275,6 @@ section h2 {
   color: #fff;
 }
 
-/* Projects */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -303,7 +295,6 @@ section h2 {
   border-radius: 10px;
 }
 
-/* Contact */
 form {
   max-width: 500px;
   margin: auto;
@@ -340,7 +331,6 @@ form button:hover {
   background: #e55749;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -348,7 +338,6 @@ footer {
   color: #fff;
 }
 
-/* Scroll-to-Top */
 #scrollTopBtn {
   position: fixed;
   bottom: 20px;
@@ -368,7 +357,6 @@ footer {
   background: #e55749;
 }
 
-/* Scroll Animation */
 .hidden {
   opacity: 0;
   transform: translateY(30px);
@@ -379,7 +367,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Footer Social Icons */
 .footer-social {
   margin-top: 10px;
   display: flex;

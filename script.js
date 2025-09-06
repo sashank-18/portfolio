@@ -1,9 +1,7 @@
-// Smooth scroll to section
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Reveal on scroll animation
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -15,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach(el => observer.observe(el));
 
-// Mobile Menu
+
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 menuBtn.addEventListener("click", () => {
@@ -23,7 +21,7 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
 });
 
-// Scroll to Top
+
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
@@ -35,7 +33,7 @@ window.addEventListener("scroll", () => {
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-// Typing animation for roles
+
 const roles = ["Full Stack Developer", "AI Enthusiast", "Problem Solver", "Tech Explorer"];
 let roleIndex = 0;
 let charIndex = 0;
@@ -47,8 +45,10 @@ function typeRole() {
     charIndex++;
     setTimeout(typeRole, 150);
   } else {
-    setTimeout(eraseRole, 2000); // Wait 2s before erasing
+    setTimeout(eraseRole, 2000); 
   }
 }
+
+
 
 
