@@ -90,7 +90,7 @@ nav ul li a:hover {
 }
 @media (max-width: 768px) {
   nav ul.active {
-    right: 20px;  
+    right: 0%;  
   }
 }
 
